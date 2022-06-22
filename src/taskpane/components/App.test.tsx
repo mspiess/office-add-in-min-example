@@ -15,7 +15,7 @@ const officeMock = new OfficeMockObject({});
 global.Office = officeMock;
 
 it("should render message while fetching contact(s)", () => {
-  render(<App title={"Some Title"} isOfficeInitialized={true} />);
+  render(<App title={"Some Title"} isOfficeInitialized={false} />);
 
-  expect(screen.getByRole("header")).toHaveTextContent("Whatever");
+  expect(screen.getByRole("heading")).toHaveTextContent("Some Title");
 });
